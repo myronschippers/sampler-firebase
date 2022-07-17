@@ -29,6 +29,36 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     ```bash
     npm install firebase
     ```
+1. Going to be using some firebase tools so run:
+    ```bash
+    npm install -g firebase-tools
+    ```
+1. Create a new file for firebase config file at the root of the project in `src/firebase-config.js`
+1. Copy the import code given to you and then paste it into the new `firebase-config.js` file
+    - code should look comething like this
+    ```javascript
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "firebase/app";
+    import { getAnalytics } from "firebase/analytics";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "...",
+      authDomain: "...",
+      projectId: "...",
+      storageBucket: "...",
+      messagingSenderId: "...",
+      appId: "...",
+      measurementId: "..."
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    ```
 
 1. Copy this code over to your project
 1. Once finished click "Continue to console" button
