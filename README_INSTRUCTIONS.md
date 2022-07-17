@@ -117,10 +117,6 @@
     ```bash
     npm install firebase
     ```
-1. Going to be using some firebase tools so run:
-    ```bash
-    npm install -g firebase-tools
-    ```
 1. Create a new file for firebase config file at the root of the project in `src/firebase-config.js`
 1. Copy the import code given to you and then paste it into the new `firebase-config.js` file
     - code should look comething like this
@@ -154,3 +150,11 @@
     - Authentication for Web
     - Firestore
     - Cloud Storage for Wed
+1. Going to be using some firebase tools so run:
+    ```bash
+    npm install -g firebase-tools
+    ```
+1. To login to firebase through the commandline run:
+    ```bash
+    firebase login
+    ```
