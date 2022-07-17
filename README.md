@@ -29,3 +29,4 @@ Spinning up a quick demo of [firebase](https://firebase.google.com/) for samplin
     - use the link provided and select the SDKs desired...
     - Authentication for Web
     - Firestore
+    - Cloud Storage for Wed
