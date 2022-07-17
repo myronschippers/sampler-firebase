@@ -1,5 +1,97 @@
 # Installation and Setup Instructions
 
+## Setup React App
+
+1. From terminal navigate to where you want to store your application locally
+1. In terminal run:
+    ```bash
+    npx create-react-app my-firebase-project
+    ```
+1. Strip out what is not needed
+    - remove `src/App.css`
+    - in `src/App.js` remove `import './App.css';`
+1. Personally I like keeping the `index.css` as my base stylesheet.
+    - rename `index.css` to `base.css`
+    - in `src/index.js` update `import './index.css';` to `import './base.css';`
+1. Move `src/App.js` to a `components` directory
+    - in `src/App.js` remove `import logo from './logo.svg';` and 
+    - move `src/App.js` to `src/components/App.js`
+    - in `src/index.js` update `import App from './App';` to `import App from './components/app/App';`
+1. Create Header component
+    - create file `src/components/header/Header.module.css`
+    ```css
+    .appHeader {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+
+    .appHeader > * + * {
+      margin: 0 0 8px 0;
+    }
+
+    .appHeaderLogo {
+      width: 40px;
+      max-width: 100%;
+    }
+
+    ```
+    - move `src/logo.svg` to `src/components/header/logo.svg`
+    - create file `src/components/header/Header.js`
+    ```javascript
+    import logo from './logo.svg';
+    import HeaderStyles from './Header.module.css';
+
+    function Header() {
+      return (
+        <header className={HeaderStyles.appHeader}>
+          <img src={logo} alt="logo" className={HeaderStyles.appHeaderLogo} />
+          <h1>Firebase Sampler</h1>
+        </header>
+      );
+    };
+
+    export default Header;
+
+    ```
+1. Create Footer component
+    - create file `src/components/footer/Footer.module.css`
+    ```css
+    .appFooter {
+      padding: 10px;
+    }
+
+    ```
+    - create file `src/components/footer/Footer.js`
+    ```javascript
+    import FooterStyles from './Footer.module.css';
+
+    function Footer() {
+      return <div className={FooterStyles.appFooter}>React demo for Firebase</div>;
+    }
+
+    export default Footer;
+
+    ```
+1. add the `Header` and `Footer` components to the `src/components/app/App.js`
+    ```javascript
+    import Header from '../header/Header';
+    import Footer from '../footer/Footer';
+
+    function App() {
+      return (
+        <div className="App">
+          <Header />
+          <div>Body Content</div>
+          <Footer />
+        </div>
+      );
+    }
+
+    export default App;
+
+    ```
+
 ## Setup Firebase
 
 ### Create Firebase Project
