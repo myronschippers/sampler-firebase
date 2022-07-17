@@ -59,12 +59,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
     ```
-
-1. Copy this code over to your project
 1. Once finished click "Continue to console" button
 1. In the comments of the script that was add there should be a `TODO` comment that says to add SDKs.
-    - navigate in browser to [Firebase Available Libraries](https://firebase.google.com/docs/web/learn-more#libraries-cdn) and expand the **Available Firebase JS SDKs (from the CDN)** section
-    - select the following SDK libraries...
+    - navigate in browser to [Firebase Available Libraries](https://firebase.google.com/docs/web/setup#available-libraries)
+    - select the `imports` for the following SDK libraries...
     - Authentication for Web
     - Firestore
     - Cloud Storage for Wed
