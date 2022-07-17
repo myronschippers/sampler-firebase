@@ -22,6 +22,10 @@ Spinning up a quick demo of [firebase](https://firebase.google.com/) for samplin
 1. Fill in the App nickname (there can be multiple apps under a single project)
 1. Click "Register app" button
 1. Add Firebase SDK section comes up with some code to place in your web app
-  - If practicing with a JS framework bundling with npm select the **Use npm** option or select the **Use a `<script>` tag** option
+    - If practicing with a JS framework bundling with npm select the **Use npm** option or select the **Use a `<script>` tag** option
 1. Copy this code over to your project
 1. Once finished click "Continue to console" button
+1. In the comments of the script that was add there should be a `TODO` comment that says to add SDKs.
+    - use the link provided and select the SDKs desired...
+    - Authentication for Web
+    - Firestore
